@@ -1,6 +1,6 @@
 from game.console import Console
 from game.seeker import Seeker
-from game.hider import Hider
+from game.hider import hider
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -13,7 +13,7 @@ class Director:
         console (Console): An instance of the class of objects known as Console.
         keep_playing (boolean): Whether or not the game can continue.
         seeker (Seeker): An instance of the class of objects known as Seeker.
-        hider (Hider): An instance of the class of objects known as Hider.
+        hider (hider): An instance of the class of objects known as hider.
     """
 
     def __init__(self):
@@ -25,7 +25,7 @@ class Director:
         self.console = Console()
         self.seeker = Seeker()
         self.keep_playing = True
-        self.hider = Hider()
+        self.hider = hider()
         
     def start_game(self):
         """Starts the game loop to control the sequence of play.
